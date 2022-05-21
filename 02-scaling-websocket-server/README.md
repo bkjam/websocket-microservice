@@ -11,7 +11,7 @@ pattern. For more information, check out [this article]().
    # Start the Redis Server
    docker run --name redis -p 6379:6379 -d redis:6.2.6
    
-   # Create Consumer Group for the Event Stream that we are tesing
+   # Create Consumer Group for the Event Stream that we are testing
    docker exec redis redis-cli XGROUP CREATE TEST_EVENT_TO_BACKEND CONSUMER_GROUP $ MKSTREAM
    ```
 
