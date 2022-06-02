@@ -34,7 +34,8 @@ pattern. For more information, check out [this article]().
    ```bash
    docker exec -it redis /bin/bash
    redis-cli
-   xrange TEST_EVENT - +
+   xrange TEST_EVENT_TO_BACKEND - +
+   xrange TEST_EVENT_TO_WEBSOCKET_SERVER - +
    ```
 
 5. Verify that only a single backend service received the message from websocket server (check the logs)
