@@ -1,7 +1,7 @@
 # Horizontal Scaling the Websocket Server
 
 This section covers how to scale the websocket server and resolve the message loss issue using publish-subscribe messaging
-pattern. For more information, check out [this article]().
+pattern. For more information, check out [this article](https://betterprogramming.pub/implement-a-scalable-websocket-server-with-spring-boot-redis-pub-sub-and-redis-streams-b6b8cc08767f).
 
 ## Usage
 
