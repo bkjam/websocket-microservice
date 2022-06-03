@@ -15,10 +15,11 @@ pattern. For more information, check out [this article](https://betterprogrammin
    docker exec redis redis-cli XGROUP CREATE TEST_EVENT_TO_BACKEND CONSUMER_GROUP $ MKSTREAM
    ```
 
-2. Start the Websocket Server
+2. Start up 2 or more Websocket Server instances
 
    ```bash
-   ./gradlew websocket-server:bootrun
+   ./gradlew websocket-server:bootrun -Pargs=--server.port=8080,--spring.application.name=websocket-server-A
+   ./gradlew websocket-server:bootrun -Pargs=--server.port=8181,--spring.application.name=websocket-server-B
    ```
 
 3. Start up 2 or more backend instances

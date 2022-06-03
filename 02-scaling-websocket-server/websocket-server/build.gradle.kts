@@ -35,6 +35,12 @@ dependencies {
 	testImplementation("io.projectreactor:reactor-test")
 }
 
+tasks.bootRun {
+	if (project.hasProperty("args")) {
+		args(project.properties["args"].toString().split(","))
+	}
+}
+
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
